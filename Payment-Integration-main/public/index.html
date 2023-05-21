@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Sparks Foundation</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <a >
+                <h1 class="headText">Sparks Foundation</h1>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="navlinks">
+                <li><a class="links" href="./index.html">Home</a></li>
+                <li><a class="links" href="./Donation.html">Donate</a></li>
+                <li><a class="links" href="./contact.html">Contact</a></li>
+                <li><a class="links" href="https://www.thesparksfoundationsingapore.org/">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first">
+            <h2 style="font-family:Times new roman ;" class="first-heading animate">Change lives and provide opportunities to <br> <span class="text"> CHILDREN</span></h2>
+            <h4 style="font-family:Times new roman ;" class="first-subtext animate2">Living in poverty.</h4>
+            <a style="font-family:Times new roman ;" id="donate" href="./Donation.html">
+                DONATE NOW
+            </a>
+        
+    <div class="project-counter-wrp">
+        <ul>
+            <li>
+                <i class="fa fa-coffee"></i>
+                <p id="number1" class="number">500</p>
+                <span></span>
+                <p>Programs</p>
+            </li>
+            <li>
+                <i class="fa fa-smile-o"></i>
+                <p id="number2" class="number">100</p>
+                <span></span>
+                <p>Administration</p>
+            </li>
+            <li>
+                <i class="fa fa-briefcase"></i>
+                <p id="number3" class="number">359</p>
+                <span></span>
+                <p>Fund Raised</p>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        var project = setInterval(projectDone, 10)
+        var clients = setInterval(happyClients, 10)
+        var coffee = setInterval(cupsCoffee, 10)
+        let count1 = 1;
+        let count2 = 1;
+        let count3 = 1;
+
+        function projectDone() {
+            count1++
+            document.querySelector("#number1").innerHTML = count1
+            if (count1 == 500) {
+                clearInterval(project)
+            }
+        }
+
+        function happyClients() {
+            count2++
+            document.querySelector("#number2").innerHTML = count2
+            if (count2 == 89) {
+                clearInterval(clients)
+            }
+        }
+
+        function cupsCoffee() {
+            count3++
+            document.querySelector("#number3").innerHTML = count3
+            if (count3 == 359) {
+                clearInterval(coffee)
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
+    <script src="./js/ham-animation.js"></script>
+    <script src="./js/homepage-animations.js"></script>
+</section>
+</main>
+</body>
+
+</html>

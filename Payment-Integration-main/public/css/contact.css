@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+	height: 10vh;
+	width: 100%;
+	position: relative;
+	
+}
+
+header {
+	width: 100%;
+	position: absolute;
+	height: 100vh;
+}
+@media only screen and (max-width: 600px) {
+	.animate {
+		transform: translateY(-50px);
+		opacity: 0;
+}
+.animate2 {
+		transform: translateY(50px);
+		opacity: 0;
+}
+.hidden {
+		opacity: 0;
+		pointer-events: none;
+		transition: all 300ms ease;
+}
+.line {
+		width: 30px;
+		height: 3px;
+		background: white;
+		margin: 5px;
+}
+.first-heading {
+		font-size: 2em;
+		transition: all 500ms 0.4s;
+
+}
+.first-subtext {
+		transition: all 500ms 0.6s;
+}
+.hamburger {
+		position: absolute;
+		cursor: pointer;
+		right: 5%;
+		top: 50%;
+		transform: translate(-5%, -50%);
+		z-index: 10;
+}
+.navlinks {
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		background-color: rgba(20, 33, 61, 0.85);
+		flex-direction: column;
+		clip-path: circle(100px at 90% -20%);
+		-webkit-clip-path: circle(100px at 90% -20%);
+		transition: all 1s ease-out;
+		pointer-events: none;
+}
+.navlinks.open {
+		clip-path: circle(1200px at 90% -20%);
+		-webkit-clip-path: circle(1200px at 90% -20%);
+		pointer-events: all;
+}
+.navlinks li {
+		opacity: 0;
+}
+.navlinks li a {
+		font-size: 25px;
+}
+.navlinks li:nth-child(1) {
+		transition: all 0.5s ease 0.2s;
+}
+.navlinks li:nth-child(2) {
+		transition: all 0.5s ease 0.2s;
+}
+.navlinks li:nth-child(3) {
+		transition: all 0.5s ease 0.2s;
+}
+.navlinks li:nth-child(4) {
+		transition: all 0.5s ease 0.2s;
+}
+li.fade {
+		opacity: 1;
+}
+}
+
+
+.navlinks {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	list-style: none;
+	height: 100%;
+	width: 25%;
+	margin-left: auto;
+	font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+.navlinks li {
+	width: 60%;
+	height: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 250ms ease;
+  background-color: white;
+	border:2px solid;
+	color: #f45702;
+}
+
+.navlinks li:hover {
+	background-color: rgba(252, 162, 17, 0.5);
+	transition: all 250ms ease;
+}
+
+.links {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	font-size: 1.4rem;
+	font-family:Garamond, serif;
+}
+body {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2044837-jpeg.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-size: 12pt;
+  font-family: "Spartan";
+  color: #2A293E;
+}
+
+.contact-us {
+  background: #f8f4e5;
+  padding: 15px 100px;
+  border-top: 10px solid #f45702;
+	
+
+}
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+  font-family: "Spartan";
+}
+
+
+h3 {
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 24pt;
+  font-style: italic;
+  margin: 0 0 0.5em 0;
+}
+
+span {
+  font-size: 8pt;
+}
+
+em {
+  color: #f45702;
+  font-weight: bold;
+}
+
+input, textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: #f8f4e5;
+  padding-left: 5px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #6bd4b1;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  float: right;
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  background: #f45702;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+button:hover {
+  background: inherit;
+  color: #f45702;
+  border-bottom: 2px solid #f45702;
+}
+
+::selection {
+  background: #ffc7b8;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid #6bd4b1;
+  -webkit-text-fill-color: #2A293E;
+  -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
